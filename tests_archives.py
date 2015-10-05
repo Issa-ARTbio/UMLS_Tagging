@@ -5,13 +5,16 @@ import os
   Solution possible: ouvrir le fichier en bytes (mode binaire) ? """
 
 k=0
-
+# Emails = [] On peut creer un dico (je ne sais pas c'est juste une proposition)
 for root, directories, filenames in os.walk('Documents'):
   for f in filenames:
     if 'recoded' in f:
       print(f)
-      with open(os.path.join(root,f), encoding="utf-8") as mail:
+      with open(os.path.join(root,f), encoding="utf-8") as mail: 
         for line in mail:
           #print(line)
           k+=1
+          # if line.find ('Stage') : Et s'il y'a stage dans la ligne
+            # Emails.append (mail) : on essai de recuperer le mail avec la fonction append ou une autre
+          
 
